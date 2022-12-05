@@ -2,11 +2,9 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Route, Routes } from 'react-router-dom'
-import { LoginIndividualSlider } from '../Components/LogInPages/QuickLogin'
-
 import { Delivery } from '../Components/Payment/ExpressDelivery'
 import { Payment } from '../Components/Payment/Payment'
-import { getCartTotal, setCart } from '../Redux/Cart/action'
+import { setCart } from '../Redux/Cart/action'
 import Cart from './Cart'
 import Healthcare from './Healthcare'
 import Home from './Home'
@@ -20,7 +18,7 @@ function AllRoutes() {
   const dispatch = useDispatch();
   function getCart() {
     
-    axios.get("https://pharmeasy-server1234.herokuapp.com/Cart").then((res) => {
+    axios.get("https://pharmeasy-clone-x5wz.onrender.com/Cart").then((res) => {
    
       dispatch(setCart(res.data));
     

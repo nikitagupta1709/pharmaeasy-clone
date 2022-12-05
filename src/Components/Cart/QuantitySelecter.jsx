@@ -16,7 +16,7 @@ function update(id,amount){
         amount:+amt
     }
     
-    fetch(`https://pharmeasy-server1234.herokuapp.com/Cart/${id}`,{
+    fetch(`https://pharmeasy-clone-x5wz.onrender.com/Cart/${id}`,{
         method:"PATCH",
         body:JSON.stringify(body),
         headers:{"content-type": "application/json"}

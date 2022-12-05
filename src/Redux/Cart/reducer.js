@@ -1,7 +1,4 @@
 import * as types from "./actionTypes";
-import axios from "axios";
-
-
 
 export const cartInitialState = {
   totalOriginalAmount:0,
@@ -9,8 +6,6 @@ export const cartInitialState = {
   totalAmount: 0,
   cartItems: [],
 };
-
-
 
 const cartReducer = (state = cartInitialState, action) => {
   switch (action.type) {

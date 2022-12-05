@@ -1,24 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import axios from "axios";
-import {
-  Box,
-  Checkbox,
-  Divider,
-  Flex,
-  HStack,
-  Radio,
-  RadioGroup,
-  Select,
-  Text,
-  VStack,
-  Button,
-  Skeleton,
-  CheckboxGroup,
-  Badge,
-  Stack,
-  filter
-} from "@chakra-ui/react";
+import {Box, Checkbox, Divider, Flex, HStack, Radio, RadioGroup, Select, Text, VStack, Button, Skeleton, CheckboxGroup, Stack} from "@chakra-ui/react";
 import ProductsGrid from "../Components/Products/ProductsGrid";
 import ProductsBreadCrumb from "../Components/Products/ProductsBreadCrum";
 import Tabs from "../Components/Navbar/Tabs";
@@ -111,7 +94,7 @@ function handleCheckedState(id){
     setLoading(true);
     axios
       .get(
-        `https://pharmeasy-server1234.herokuapp.com/Products?_page=${page}&_limit=9${orderBy && p1}${p3 ? p3.join("") : ""}`
+        `https://pharmeasy-clone-x5wz.onrender.com/Products?_page=${page}&_limit=9${orderBy && p1}${p3 ? p3.join("") : ""}`
       )
       .then((res) => {
         // console.log(res);

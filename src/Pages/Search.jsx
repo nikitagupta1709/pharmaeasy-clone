@@ -9,14 +9,13 @@ function Search() {
   const isAuth = localStorage.getItem('isAuth');
   const dispatch = useDispatch();
   const navigate = useNavigate()
-  const { cartItems } = useSelector((state) => state.cart);
-  
-
+  const { cartItems } = useSelector((state) => state.cart); 
  const {name} = useParams();
+ 
 console.log(name);
 const [data,setData] = useState([]);
 function updateCart(amt,id,el){
-  axios.post("https://pharmeasy-server1234.herokuapp.com/Cart",{
+  axios.post("https://pharmeasy-clone-x5wz.onrender.com/Cart",{
       ...el,
       amount:amt,
   }).then(res=>{
@@ -25,7 +24,7 @@ function updateCart(amt,id,el){
 }
 function removeItem(id){
         
-  fetch(`https://pharmeasy-server1234.herokuapp.com/Cart/${id}`,{
+  fetch(`https://pharmeasy-clone-x5wz.onrender.com/Cart/${id}`,{
   method:"DELETE",
  
   headers:{"content-type": "application/json"}
@@ -35,7 +34,7 @@ function removeItem(id){
 }
 
  useEffect(()=>{
-  axios.get(`https://pharmeasy-server1234.herokuapp.com/Products?q=${name}`).then(res=>setData(res.data))
+  axios.get(`https://pharmeasy-clone-x5wz.onrender.com/Products?q=${name}`).then(res=>setData(res.data))
  },[name])
  useEffect(()=>{
   dispatch(getCartTotal());

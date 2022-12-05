@@ -9,7 +9,7 @@ function SingleProduct() {
     const [productData,setProductData] = useState([]);
     useEffect(()=>{
 
-        axios.get(`https://pharmeasy-server1234.herokuapp.com/Products/${id}`)
+        axios.get(`https://pharmeasy-clone-x5wz.onrender.com/Products/${id}`)
         .then(res=>setProductData(res.data));
 
     },[id])

@@ -13,7 +13,7 @@ function CartStack() {
 
   function removeItem(id){
         
-    fetch(`https://pharmeasy-server1234.herokuapp.com/Cart/${id}`,{
+    fetch(`https://pharmeasy-clone-x5wz.onrender.com/Cart/${id}`,{
     method:"DELETE",
    
     headers:{"content-type": "application/json"}

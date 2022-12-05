@@ -19,7 +19,7 @@ export function Order() {
 
 
 cartItems.map(el=>{
-  fetch(`https://pharmeasy-server1234.herokuapp.com/Cart/${el.id}`,{
+  fetch(`https://pharmeasy-clone-x5wz.onrender.com/Cart/${el.id}`,{
     method:"DELETE",
    
     headers:{"content-type": "application/json"}

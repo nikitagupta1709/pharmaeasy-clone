@@ -144,14 +144,14 @@ export function LoginIndividualSlider() {
               <Stack spacing='20px'>
               <form onSubmit={handleLogin}>
               <Box>
-                    <FormLabel
-                        htmlFor="phone"
-                        fontWeight="700"
-                        py="12px"
-                        color="#4f585e"
-                        >
-                        Quick Login
-                    </FormLabel>
+                  <FormLabel
+                      htmlFor="phone"
+                      fontWeight="700"
+                      py="12px"
+                      color="#4f585e"
+                      >
+                      Quick Login
+                  </FormLabel>
                     <Stack spacing="20px">
                     <Input
                         h="2.8rem"
